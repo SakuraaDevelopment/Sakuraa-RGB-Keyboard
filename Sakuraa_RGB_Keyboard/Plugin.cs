@@ -261,27 +261,6 @@ namespace Sakuraa_RGB_Keyboard
             {
                 Debug.Log("Error: " + ex.Message);
             }
-            // computer interface mod:
-            try
-            {
-                ModdedUpObject = GameObject.Find(stump_keydir + "Up");
-                ModdedDownObject = GameObject.Find(stump_keydir + "Down");
-                ModdedLeftObject = GameObject.Find(stump_keydir + "Left");
-                ModdedRightObject = GameObject.Find(stump_keydir + "Right");
-                ModdedSpaceObject = GameObject.Find(stump_keydir + "Space");
-                ModdedBackObject = GameObject.Find(stump_keydir + "Back");
-                Debug.Log("Loaded stump modded keys");
-            }
-            catch 
-            {
-                ModdedUpObject = null;
-                ModdedDownObject = null;
-                ModdedLeftObject = null;
-                ModdedRightObject = null;
-                ModdedSpaceObject = null;
-                ModdedBackObject = null;
-                Debug.Log("Couldnt get computer interface keys in stump");
-            }
 
 
 
@@ -342,28 +321,6 @@ namespace Sakuraa_RGB_Keyboard
             {
                 Debug.Log("Error: " + ex.Message);
             }
-            // computer interface mod:
-            try
-            {
-                mountain_ModdedUpObject = GameObject.Find(mountain_keydir + "Up");
-                mountain_ModdedDownObject = GameObject.Find(mountain_keydir + "Down");
-                mountain_ModdedLeftObject = GameObject.Find(mountain_keydir + "Left");
-                mountain_ModdedRightObject = GameObject.Find(mountain_keydir + "Right");
-                mountain_ModdedSpaceObject = GameObject.Find(mountain_keydir + "Space");
-                mountain_ModdedBackObject = GameObject.Find(mountain_keydir + "Back");
-                Debug.Log("Loaded mountain modded keys");
-            }
-            catch
-            {
-                mountain_ModdedUpObject = null;
-                mountain_ModdedDownObject = null;
-                mountain_ModdedLeftObject = null;
-                mountain_ModdedRightObject = null;
-                mountain_ModdedSpaceObject = null;
-                mountain_ModdedBackObject = null;
-                Debug.Log("Couldnt get computer interface keys in mountains");
-            }
-
 
 
             // clouds
@@ -424,7 +381,51 @@ namespace Sakuraa_RGB_Keyboard
             {
                 Debug.Log("Error: " + ex.Message);
             }
+
             // computer interface mod:
+            // stump
+            try
+            {
+                ModdedUpObject = GameObject.Find(stump_keydir + "Up");
+                ModdedDownObject = GameObject.Find(stump_keydir + "Down");
+                ModdedLeftObject = GameObject.Find(stump_keydir + "Left");
+                ModdedRightObject = GameObject.Find(stump_keydir + "Right");
+                ModdedSpaceObject = GameObject.Find(stump_keydir + "Space");
+                ModdedBackObject = GameObject.Find(stump_keydir + "Back");
+                Debug.Log("Loaded stump modded keys");
+            }
+            catch
+            {
+                ModdedUpObject = null;
+                ModdedDownObject = null;
+                ModdedLeftObject = null;
+                ModdedRightObject = null;
+                ModdedSpaceObject = null;
+                ModdedBackObject = null;
+                Debug.Log("Couldnt get computer interface keys in stump");
+            }
+            // mountain
+            try
+            {
+                mountain_ModdedUpObject = GameObject.Find(mountain_keydir + "Up");
+                mountain_ModdedDownObject = GameObject.Find(mountain_keydir + "Down");
+                mountain_ModdedLeftObject = GameObject.Find(mountain_keydir + "Left");
+                mountain_ModdedRightObject = GameObject.Find(mountain_keydir + "Right");
+                mountain_ModdedSpaceObject = GameObject.Find(mountain_keydir + "Space");
+                mountain_ModdedBackObject = GameObject.Find(mountain_keydir + "Back");
+                Debug.Log("Loaded mountain modded keys");
+            }
+            catch
+            {
+                mountain_ModdedUpObject = null;
+                mountain_ModdedDownObject = null;
+                mountain_ModdedLeftObject = null;
+                mountain_ModdedRightObject = null;
+                mountain_ModdedSpaceObject = null;
+                mountain_ModdedBackObject = null;
+                Debug.Log("Couldnt get computer interface keys in mountains");
+            }
+            // clouds
             try
             {
                 clouds_ModdedUpObject = GameObject.Find(clouds_keydir + "Up");
@@ -449,7 +450,7 @@ namespace Sakuraa_RGB_Keyboard
             ChangeColor();
         }
 
-		void Update()
+        void Update()
 		{
             /* Code here runs every frame when the mod is enabled */
             ChangeColor();
@@ -504,17 +505,6 @@ namespace Sakuraa_RGB_Keyboard
             LetterXObject.GetComponent<Renderer>().material.color = rgb;
             LetterYObject.GetComponent<Renderer>().material.color = rgb;
             LetterZObject.GetComponent<Renderer>().material.color = rgb;
-            // computer interface mod:
-            try
-            {
-                ModdedUpObject.GetComponent<Renderer>().material.color = rgb;
-                ModdedDownObject.GetComponent<Renderer>().material.color = rgb;
-                ModdedLeftObject.GetComponent<Renderer>().material.color = rgb;
-                ModdedRightObject.GetComponent<Renderer>().material.color = rgb;
-                ModdedSpaceObject.GetComponent<Renderer>().material.color = rgb;
-                ModdedBackObject.GetComponent<Renderer>().material.color = rgb;
-            }
-            catch { }
 
             // mountains
             mountain_option1Object.GetComponent<Renderer>().material.color = rgb;
@@ -560,17 +550,6 @@ namespace Sakuraa_RGB_Keyboard
             mountain_LetterXObject.GetComponent<Renderer>().material.color = rgb;
             mountain_LetterYObject.GetComponent<Renderer>().material.color = rgb;
             mountain_LetterZObject.GetComponent<Renderer>().material.color = rgb;
-            // computer interface mod:
-            try
-            {
-                mountain_ModdedUpObject.GetComponent<Renderer>().material.color = rgb;
-                mountain_ModdedDownObject.GetComponent<Renderer>().material.color = rgb;
-                mountain_ModdedLeftObject.GetComponent<Renderer>().material.color = rgb;
-                mountain_ModdedRightObject.GetComponent<Renderer>().material.color = rgb;
-                mountain_ModdedSpaceObject.GetComponent<Renderer>().material.color = rgb;
-                mountain_ModdedBackObject.GetComponent<Renderer>().material.color = rgb;
-            }
-            catch { }
 
             // clouds
             clouds_option1Object.GetComponent<Renderer>().material.color = rgb;
@@ -616,7 +595,32 @@ namespace Sakuraa_RGB_Keyboard
             clouds_LetterXObject.GetComponent<Renderer>().material.color = rgb;
             clouds_LetterYObject.GetComponent<Renderer>().material.color = rgb;
             clouds_LetterZObject.GetComponent<Renderer>().material.color = rgb;
+
+
             // computer interface mod:
+            // stump
+            try
+            {
+                ModdedUpObject.GetComponent<Renderer>().material.color = rgb;
+                ModdedDownObject.GetComponent<Renderer>().material.color = rgb;
+                ModdedLeftObject.GetComponent<Renderer>().material.color = rgb;
+                ModdedRightObject.GetComponent<Renderer>().material.color = rgb;
+                ModdedSpaceObject.GetComponent<Renderer>().material.color = rgb;
+                ModdedBackObject.GetComponent<Renderer>().material.color = rgb;
+            }
+            catch { }
+            // mountain
+            try
+            {
+                mountain_ModdedUpObject.GetComponent<Renderer>().material.color = rgb;
+                mountain_ModdedDownObject.GetComponent<Renderer>().material.color = rgb;
+                mountain_ModdedLeftObject.GetComponent<Renderer>().material.color = rgb;
+                mountain_ModdedRightObject.GetComponent<Renderer>().material.color = rgb;
+                mountain_ModdedSpaceObject.GetComponent<Renderer>().material.color = rgb;
+                mountain_ModdedBackObject.GetComponent<Renderer>().material.color = rgb;
+            }
+            catch { }
+            // clouds
             try
             {
                 clouds_ModdedUpObject.GetComponent<Renderer>().material.color = rgb;
